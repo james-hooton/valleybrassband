@@ -1,0 +1,32 @@
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 15%;
+}
+
+.welcome {
+    text-align: center;
+    /* font-size: xx-large; */
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    color: black;
+    margin: 10px;
+    font-size: large;
+}
+
+:root {
+    --accent-bg: #fafafa
+}
+
+.fa {
+    padding: 5px;
+    text-decoration: none;
+    font-size: x-large !important;
+  }

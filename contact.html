@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    #map { height: 400px; }
+</style>
+
+<body>
+    <header>
+        <h1 class="logo"><img src="Coat Original (1).png" alt=""></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="history.html">History</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact</h2>
+        <p>We are happy to receive enquiries about joining the band, requests for bookings, securing concert tickets and any offers of help. You can either phone us or email us. All enquires will go to Dave Chadwick.</p>
+        <p><a href="tel:07940 509441">T: 07940 509441</a></p>
+        <p><a href="mailto:valleybrass@gmail.com">E: valleybrass@gmail.com</a></p>
+        <div id="map"></div>
+        <script>
+            var map = L.map('map').setView([53.465412, -2.695387], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+            var marker = L.marker([53.465412, -2.695387]).addTo(map);
+            marker.bindPopup("<b>Valey Brass Band</b><br>The Richard Evans Centre<br>West End Road<br>Haydock<br>St. Helens<br>WA11 0AH").openPopup();
+        </script>
+        <h3>Parking</h3>
+
+        <p>Car parking is available on-site, but spaces are limited during rehearsal hours. On-street parking is available on School Street and West End Road if the car park is full.</p>
+        
+        <h3>Accessibility</h3>
+        
+        <p>Please contact us if you require wheelchair access to our building, so we can prepare ramp access in advance. An accessible toilet is available within our centre.</p>
+        
+        <h3>Amenities</h3>
+        
+        <p>A kitchen with tea and coffee making facilities can be accessed by members of the band, with chairs and tables available. We are located in the large village of Haydock, and directly across the road from a convenience store, with a large supermarket 5 minutes drive from our centre.</p>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com/valleybrasshaydock" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/valleybrassband" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/valleybrassband/" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/ValleyBrassHaydock" class="fa fa-youtube"></a>
+        <p>&copy; Valley Brass (Haydock) 2022 | Charity Number: 1054549 | Website by <a href="https://www.jameshooton.com">James Hooton Media</a></p>
+    </footer>
+</body>
+</html>
