@@ -42,3 +42,24 @@ border-radius: 5px;
 padding: 1.5rem;
 margin: 2rem 0;
 }
+
+/* Overide dark mode styling defined by stylesheet*/
+
+:root {
+    --bg: #fff;
+    --text: #212121;
+    --text-light: #585858;
+    --border: #d8dae1;
+    --accent: #0d47a1;
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
+}
+
+@media (prefers-color-scheme: dark) {
+    img,
+    video {
+        opacity: 1;
+    }
+  }
