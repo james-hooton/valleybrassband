@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Valley Brass Band</title>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script stc="scripts.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.heading-text span {
+  font-weight: 100;
+}
+
+/* Responsive image gallery rules begin*/
+
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+}
+
+/* overlay styles */
+
+.image-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+  /* center overlay content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hover */
+.image-item:hover .overlay {
+  transform: scale(1);
+}
+</style>
+
+<body>
+    <header>
+        <h1 class="logo"><img src="Coat Original (1).png" alt=""></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="history.html">History</a>
+            <a href="events.html">Events</a>
+			<a href="supportus.html">Support Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Photos</h2>
+		<div class="container">
+			<div class="image-gallery">
+			  <div class="column">
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/VWcPlbHglYc" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/O0N9MF--hK4" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/FV3GConVSss" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/0ESjL-Nw22Y" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/KTVn62x6fFw" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/VSeVhmW4_JQ" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/07aFaTf24Kg" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/DqyYTM7pR2o" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+				<div class="image-item">
+				  <img src="https://source.unsplash.com/IdNOTjPeHrE" alt="" />
+				  <div class="overlay"><span>Image title</span></div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com/valleybrasshaydock" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/valleybrassband" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/valleybrassband/" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/ValleyBrassHaydock" class="fa fa-youtube"></a>
+        <p>&copy; Valley Brass (Haydock) 2023 | Charity Number: 1054549 | Website by <a href="https://www.jameshooton.com">James Hooton Media</a></p>
+    </footer>
+</body>
+</html>
